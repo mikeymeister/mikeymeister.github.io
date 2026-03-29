@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/tailwind.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body>
+    <header class="bg-white border-b border-gray-200" x-data="{ mobileMenuOpen: false }" x-on:keydown.escape.window="mobileMenuOpen = false">
+  <nav aria-label="Global" class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8">
+    <a href="/" class="-m-1.5 p-1.5 flex flex-col gap-2">
+        <span class="text-gray-400">The totally unofficial</span>
+        <span class="">LDCC Club Championship</span>
+    </a>
+    <div class="flex lg:hidden">
+      <button type="button" x-on:click="mobileMenuOpen = true" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="/years" class="font-semibold text-gray-900 text-sm/6">Archive</a>
+      <a href="/methodology" class="font-semibold text-gray-900 text-sm/6">Methodology</a>
+    </div>
+  </nav>
+  <div x-cloak x-show="mobileMenuOpen" class="lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div x-show="mobileMenuOpen" class="fixed inset-0 z-40 bg-gray-500/75" x-on:click="mobileMenuOpen = false" x-transition.opacity></div>
+    <div class="fixed inset-0 z-50 flex justify-end">
+      <div
+        class="w-full p-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        x-show="mobileMenuOpen"
+        x-on:click.stop
+        x-transition:enter="transition ease-in-out duration-500"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in-out duration-500"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+      >
+        <div class="flex items-center justify-between">
+          <a href="/" class="-m-1.5 p-1.5 flex flex-col gap-2">
+            <span class="text-gray-400">The totally unofficial</span>
+            <span class="">LDCC Club Championship</span>
+          </a>
+          <button type="button" x-on:click="mobileMenuOpen = false" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="flow-root mt-6">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="py-6 space-y-2">
+              <a href="/years" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Archive</a>
+              <a href="/methodology" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Methodology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container mx-auto px-4 md:px-6 my-16">
+            <div class="w-full mx-auto mb-16 prose">
+        <h1 class="text-base font-semibold text-gray-900">Methodology</h1>
+        <p>Corrected points are calculated as a team's total points divided by their games played. This is then multiplied by 22 (the number of games in a 1st XI season. This makes all team's have a points total that can be compared across standards and divisions.</p>
+        <p>The points are then corrected for the division they were gained in. This means that a 1st division point is worth about half a premier division point. A 2nd division point is worth approximately half a 1st division point and so on.</p>
+        <p>A corrected point is worth the same in a 1st team, 2nd team or 3rd team.</p>
+        <p>A club's best performing 3rd XI is chosen to contribute to the club score. It was found that an average of all a club's 3rd XIs often penalised clubs who were able to put out multiple 3rd XIs which seemed unfair. Clicking the details button on a clubs points in the table will display which teams contributed to the total club score.</p>
+    </div>
+    </div>
+</body>
+</html>
+<!-- Cached by Page Cache at 2026-03-29T21:53:17 -->
