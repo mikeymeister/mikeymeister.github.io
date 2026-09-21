@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/tailwind.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-white border-b border-gray-200" x-data="{ mobileMenuOpen: false }" x-on:keydown.escape.window="mobileMenuOpen = false">
+  <nav aria-label="Global" class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8">
+    <a href="https://mikeymeister.github.io/" class="-m-1.5 p-1.5 flex flex-col gap-2">
+        <span class="text-gray-400">The totally unofficial</span>
+        <span class="">LDCC Club Championship</span>
+    </a>
+    <div class="flex lg:hidden">
+      <button type="button" x-on:click="mobileMenuOpen = true" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="https://mikeymeister.github.io/years" class="font-semibold text-gray-900 text-sm/6">Years</a>
+      <a href="https://mikeymeister.github.io/clubs" class="font-semibold text-gray-900 text-sm/6">Clubs</a>
+      <a href="https://mikeymeister.github.io/methodology" class="font-semibold text-gray-900 text-sm/6">Methodology</a>
+    </div>
+  </nav>
+  <div x-cloak x-show="mobileMenuOpen" class="lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div x-show="mobileMenuOpen" class="fixed inset-0 z-40 bg-gray-500/75" x-on:click="mobileMenuOpen = false" x-transition.opacity></div>
+    <div class="fixed inset-0 z-50 flex justify-end">
+      <div
+        class="w-full p-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        x-show="mobileMenuOpen"
+        x-on:click.stop
+        x-transition:enter="transition ease-in-out duration-500"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in-out duration-500"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+      >
+        <div class="flex items-center justify-between">
+          <a href="https://mikeymeister.github.io/" class="-m-1.5 p-1.5 flex flex-col gap-2">
+            <span class="text-gray-400">The totally unofficial</span>
+            <span class="">LDCC Club Championship</span>
+          </a>
+          <button type="button" x-on:click="mobileMenuOpen = false" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="flow-root mt-6">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="py-6 space-y-2">
+              <a href="https://mikeymeister.github.io/years" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Years</a>
+              <a href="https://mikeymeister.github.io/clubs" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Clubs</a>
+              <a href="https://mikeymeister.github.io/methodology" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Methodology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container mx-auto px-6 md:px-8 my-16 flex-1">
+        
+	<div class="w-full max-w-screen-md mx-auto prose sm:flex sm:items-center">
+		<h1>Clubs</h1>
+	</div>
+	<ul role="list" class="w-full max-w-screen-md mx-auto mt-5 divide-y divide-gray-100">
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/aigburth-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Aigburth CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/ainsdale-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Ainsdale CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/alder-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Alder CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/aughton-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Aughton CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/bedford-park-cc-lancs" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Bedford Park CC, Lancs</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/birchfield-park-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Birchfield Park CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/birkenhead-park-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Birkenhead Park CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/birkenhead-st-marys-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Birkenhead St. Mary&#039;s CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/bootle-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Bootle CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/burscough-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Burscough CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/caldy-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Caldy CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/cheshire-lines-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Cheshire Lines CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/churchtown-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Churchtown CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/colwyn-bay-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Colwyn Bay CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/earlestown-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Earlestown CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/fleetwood-hesketh-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Fleetwood Hesketh CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/formby-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Formby CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/goodlass-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Goodlass CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/goose-green-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Goose Green CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/halsall-west-end-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Halsall West End CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/haydock-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Haydock CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/highfield-cc-lancs" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Highfield CC, Lancs</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/hightown-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Hightown CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/hightown-st-marys-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Hightown St Marys CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/huyton-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Huyton CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/irby-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Irby CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/leigh-cc-lancashire" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Leigh CC, Lancashire</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/liverpool-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Liverpool CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/liverpool-lions-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Liverpool Lions CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/liverpool-superkings-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Liverpool Superkings CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/lytham-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Lytham CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/maghull-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Maghull CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/merseyside-commonwealth-conference-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Merseyside Commonwealth Conference CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/merseyside-sports-and-cultural-club" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Merseyside Sports and Cultural Club</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/moorfield-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Moorfield CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/moss-side-maghull-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Moss Side Maghull CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/mossley-hill-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Mossley Hill CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/new-brighton-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">New Brighton CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/new-victoria-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">New Victoria CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/newton-le-willows-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Newton-le-Willows CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/norley-hall-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Norley Hall CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/northern-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Northern CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/northop-hall-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Northop Hall CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/old-xaverians-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Old Xaverians CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/ormskirk-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Ormskirk CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/orrell-red-triangle-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Orrell Red Triangle CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/oxton-cc-cheshire" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Oxton CC, Cheshire</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/parkfield-liscard-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Parkfield Liscard CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/prescot-odyssey-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Prescot &amp; Odyssey CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/prestatyn-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Prestatyn CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/rainford-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Rainford CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/rainhill-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Rainhill CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/sefton-park-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Sefton Park CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/skelmersdale-dalton-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Skelmersdale &amp; Dalton CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/skelmersdale-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Skelmersdale CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/south-liverpool-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">South Liverpool CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/southport-birkdale-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Southport &amp; Birkdale CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/southport-trinity-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Southport Trinity CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/spring-view-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Spring View CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/st-helens-cc-lancs" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">St Helens CC, Lancs</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/st-helens-town-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">St Helens Town CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/sutton-st-helens-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Sutton (St Helens) CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/wallasey-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Wallasey CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/wavertree-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Wavertree CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/whitefield-roby-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Whitefield (Roby) CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/widnes-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Widnes CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/wigan-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Wigan CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+					<li class="w-full">
+				<a href="https://mikeymeister.github.io/clubs/winstanley-park-cc" class="flex items-center justify-between py-5 gap-x-6">
+					<p class="text-base font-semibold text-gray-900">Winstanley Park CC</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-400 size-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</a>
+			</li>
+			</ul>
+
+    </div>
+    <footer class="block pb-8 bg-white border border-t">
+      <p class="mt-8 text-center text-gray-600 text-sm/6">It's just a bit of fun. May not your gears be grindeth.</p>
+  </div>
+</footer>
+
+    </body>
+</html>
+<!-- Cached by Page Cache at 2026-09-21T22:24:24 -->

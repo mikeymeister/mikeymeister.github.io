@@ -10,7 +10,7 @@
         [x-cloak] { display: none !important; }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
     <header class="bg-white border-b border-gray-200" x-data="{ mobileMenuOpen: false }" x-on:keydown.escape.window="mobileMenuOpen = false">
   <nav aria-label="Global" class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8">
     <a href="https://mikeymeister.github.io/" class="-m-1.5 p-1.5 flex flex-col gap-2">
@@ -26,7 +26,8 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="https://mikeymeister.github.io/years" class="font-semibold text-gray-900 text-sm/6">Archive</a>
+      <a href="https://mikeymeister.github.io/years" class="font-semibold text-gray-900 text-sm/6">Years</a>
+      <a href="https://mikeymeister.github.io/clubs" class="font-semibold text-gray-900 text-sm/6">Clubs</a>
       <a href="https://mikeymeister.github.io/methodology" class="font-semibold text-gray-900 text-sm/6">Methodology</a>
     </div>
   </nav>
@@ -59,7 +60,8 @@
         <div class="flow-root mt-6">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="py-6 space-y-2">
-              <a href="https://mikeymeister.github.io/years" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Archive</a>
+              <a href="https://mikeymeister.github.io/years" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Years</a>
+              <a href="https://mikeymeister.github.io/clubs" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Clubs</a>
               <a href="https://mikeymeister.github.io/methodology" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Methodology</a>
             </div>
           </div>
@@ -69,7 +71,7 @@
   </div>
 </header>
 
-    <div class="container mx-auto px-6 md:px-8 my-16">
+    <div class="container mx-auto px-6 md:px-8 my-16 flex-1">
             <div class="w-full mx-auto mb-16 prose">
         <h1 class="text-base font-semibold text-gray-900">Methodology</h1>
         <p>Corrected points are calculated as a team's total points divided by their games played. This is then multiplied by 22 (the number of games in a 1st XI season. This makes all team's have a points total that can be compared across standards and divisions.</p>
@@ -83,6 +85,6 @@
   </div>
 </footer>
 
-</body>
+    </body>
 </html>
-<!-- Cached by Page Cache at 2026-03-30T11:06:36 -->
+<!-- Cached by Page Cache at 2026-09-21T22:22:42 -->

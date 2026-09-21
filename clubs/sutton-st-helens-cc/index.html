@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/tailwind.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-white border-b border-gray-200" x-data="{ mobileMenuOpen: false }" x-on:keydown.escape.window="mobileMenuOpen = false">
+  <nav aria-label="Global" class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8">
+    <a href="https://mikeymeister.github.io/" class="-m-1.5 p-1.5 flex flex-col gap-2">
+        <span class="text-gray-400">The totally unofficial</span>
+        <span class="">LDCC Club Championship</span>
+    </a>
+    <div class="flex lg:hidden">
+      <button type="button" x-on:click="mobileMenuOpen = true" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="https://mikeymeister.github.io/years" class="font-semibold text-gray-900 text-sm/6">Years</a>
+      <a href="https://mikeymeister.github.io/clubs" class="font-semibold text-gray-900 text-sm/6">Clubs</a>
+      <a href="https://mikeymeister.github.io/methodology" class="font-semibold text-gray-900 text-sm/6">Methodology</a>
+    </div>
+  </nav>
+  <div x-cloak x-show="mobileMenuOpen" class="lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div x-show="mobileMenuOpen" class="fixed inset-0 z-40 bg-gray-500/75" x-on:click="mobileMenuOpen = false" x-transition.opacity></div>
+    <div class="fixed inset-0 z-50 flex justify-end">
+      <div
+        class="w-full p-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        x-show="mobileMenuOpen"
+        x-on:click.stop
+        x-transition:enter="transition ease-in-out duration-500"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in-out duration-500"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+      >
+        <div class="flex items-center justify-between">
+          <a href="https://mikeymeister.github.io/" class="-m-1.5 p-1.5 flex flex-col gap-2">
+            <span class="text-gray-400">The totally unofficial</span>
+            <span class="">LDCC Club Championship</span>
+          </a>
+          <button type="button" x-on:click="mobileMenuOpen = false" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="flow-root mt-6">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="py-6 space-y-2">
+              <a href="https://mikeymeister.github.io/years" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Years</a>
+              <a href="https://mikeymeister.github.io/clubs" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Clubs</a>
+              <a href="https://mikeymeister.github.io/methodology" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Methodology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container mx-auto px-6 md:px-8 my-16 flex-1">
+        <div class="w-full max-w-screen-md mx-auto">
+  <h1 class="text-xl font-semibold text-gray-900">Sutton (St Helens) CC</h1>
+
+      <div class="flex flex-col gap-12 mt-8">
+      <div>
+        <h2 class="text-sm font-semibold text-gray-900">League position by year</h2>
+        <p class="mt-1 text-xs text-gray-500">Overall club position each season.</p>
+        <div class="mt-4">
+          <canvas id="position-chart" role="img" aria-label="League position by year"></canvas>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold text-gray-900">Total points by year</h2>
+        <p class="mt-1 text-xs text-gray-500">Corrected championship points scored each season.</p>
+        <div class="mt-4">
+          <canvas id="points-chart" role="img" aria-label="Total points by year"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script type="application/json" id="club-history-data">[{"label":"2010","url":"https:\/\/mikeymeister.github.io\/years\/2010","position":39,"points":93.75,"winningPoints":1050},{"label":"2011","url":"https:\/\/mikeymeister.github.io\/years\/2011","position":37,"points":99.9,"winningPoints":877},{"label":"2012","url":"https:\/\/mikeymeister.github.io\/years\/2012","position":36,"points":107.25,"winningPoints":1052.2},{"label":"2013","url":"https:\/\/mikeymeister.github.io\/years\/2013","position":40,"points":87.25,"winningPoints":1006},{"label":"2014","url":"https:\/\/mikeymeister.github.io\/years\/2014","position":39,"points":74.825,"winningPoints":913},{"label":"2015","url":"https:\/\/mikeymeister.github.io\/years\/2015","position":38,"points":109.75,"winningPoints":1010},{"label":"2016","url":"https:\/\/mikeymeister.github.io\/years\/2016","position":41,"points":91.5,"winningPoints":989},{"label":"2018","url":"https:\/\/mikeymeister.github.io\/years\/2018","position":34,"points":179.35,"winningPoints":1188},{"label":"2019","url":"https:\/\/mikeymeister.github.io\/years\/2019","position":36,"points":130.25,"winningPoints":1037.1},{"label":"2021","url":"https:\/\/mikeymeister.github.io\/years\/2021","position":36,"points":113.025,"winningPoints":1082.7},{"label":"2022","url":"https:\/\/mikeymeister.github.io\/years\/2022","position":38,"points":166.375,"winningPoints":1152},{"label":"2023","url":"https:\/\/mikeymeister.github.io\/years\/2023","position":42,"points":131.5,"winningPoints":1031},{"label":"2024","url":"https:\/\/mikeymeister.github.io\/years\/2024","position":39,"points":178.25,"winningPoints":1070},{"label":"2025","url":"https:\/\/mikeymeister.github.io\/years\/2025","position":34,"points":223.25,"winningPoints":1045},{"label":"2026","url":"https:\/\/mikeymeister.github.io\/years\/2026","position":34,"points":163.25,"winningPoints":1021.2222222222222}]</script>
+    <script type="application/json" id="club-winning-points-max">1188</script>
+  </div>
+    </div>
+    <footer class="block pb-8 bg-white border border-t">
+      <p class="mt-8 text-center text-gray-600 text-sm/6">It's just a bit of fun. May not your gears be grindeth.</p>
+  </div>
+</footer>
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script>
+      (function () {
+        const history = JSON.parse(document.getElementById('club-history-data').textContent);
+        const winningPointsMax = JSON.parse(document.getElementById('club-winning-points-max').textContent);
+
+        function ordinal(n) {
+          const rem100 = n % 100;
+          if (rem100 >= 11 && rem100 <= 13) return n + 'th';
+          switch (n % 10) {
+            case 1: return n + 'st';
+            case 2: return n + 'nd';
+            case 3: return n + 'rd';
+            default: return n + 'th';
+          }
+        }
+
+        // Draws a dashed horizontal benchmark line + label, e.g. "Winning points".
+        // Opt in per-chart via options.plugins.benchmarkLine = { value, label }.
+        const benchmarkLinePlugin = {
+          id: 'benchmarkLine',
+          afterDatasetsDraw(chart) {
+            const opts = chart.options.plugins && chart.options.plugins.benchmarkLine;
+            if (!opts) return;
+
+            const { ctx, chartArea, scales } = chart;
+            const y = scales.y.getPixelForValue(opts.value);
+
+            ctx.save();
+            ctx.strokeStyle = '#898781';
+            ctx.lineWidth = 1;
+            ctx.setLineDash([4, 3]);
+            ctx.beginPath();
+            ctx.moveTo(chartArea.left, y);
+            ctx.lineTo(chartArea.right, y);
+            ctx.stroke();
+
+            ctx.setLineDash([]);
+            ctx.fillStyle = '#52514e';
+            ctx.font = '600 11px system-ui, -apple-system, "Segoe UI", sans-serif';
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'bottom';
+            ctx.fillText(opts.label, chartArea.right, y - 4);
+            ctx.restore();
+          },
+        };
+
+        function baseOptions() {
+          return {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 640 / 220,
+            layout: {
+              padding: { top: 24 },
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                displayColors: false,
+              },
+            },
+            elements: {
+              line: { borderWidth: 2, tension: 0 },
+              point: {
+                radius: 4,
+                hoverRadius: 5,
+                backgroundColor: (ctx) => ctx.dataset.borderColor,
+                borderColor: '#fcfcfb',
+                borderWidth: 2,
+              },
+            },
+            scales: {
+              x: {
+                offset: true,
+                grid: { display: false },
+                ticks: { color: '#898781', font: { size: 10 } },
+              },
+              y: {
+                grid: { color: '#e1e0d9' },
+                border: { display: false },
+                ticks: { color: '#898781', font: { size: 10 } },
+              },
+            },
+            onClick(evt, elements) {
+              if (!elements.length) return;
+              const url = history[elements[0].index].url;
+              if (url) window.location.href = url;
+            },
+            onHover(evt, elements) {
+              evt.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+            },
+          };
+        }
+
+        new Chart(document.getElementById('position-chart'), {
+          type: 'line',
+          data: {
+            labels: history.map((h) => h.label),
+            datasets: [{
+              data: history.map((h) => h.position),
+              borderColor: '#2a78d6',
+              clip: { left: 0, right: 0, top: false, bottom: 0 },
+            }],
+          },
+          options: Object.assign(baseOptions(), {
+            scales: Object.assign({}, baseOptions().scales, {
+              y: Object.assign({}, baseOptions().scales.y, {
+                reverse: true,
+                min: 1,
+                ticks: Object.assign({}, baseOptions().scales.y.ticks, {
+                  precision: 0,
+                  callback: (value) => ordinal(value),
+                }),
+              }),
+            }),
+            plugins: Object.assign({}, baseOptions().plugins, {
+              tooltip: Object.assign({}, baseOptions().plugins.tooltip, {
+                callbacks: {
+                  label: (ctx) => ordinal(ctx.parsed.y),
+                },
+              }),
+            }),
+          }),
+          plugins: [benchmarkLinePlugin],
+        });
+
+        new Chart(document.getElementById('points-chart'), {
+          type: 'line',
+          data: {
+            labels: history.map((h) => h.label),
+            datasets: [{
+              data: history.map((h) => h.points),
+              borderColor: '#eb6834',
+            }],
+          },
+          options: Object.assign(baseOptions(), {
+            scales: Object.assign({}, baseOptions().scales, {
+              y: Object.assign({}, baseOptions().scales.y, {
+                min: 0,
+                max: winningPointsMax,
+              }),
+            }),
+            plugins: Object.assign({}, baseOptions().plugins, {
+              tooltip: Object.assign({}, baseOptions().plugins.tooltip, {
+                callbacks: {
+                  label: (ctx) => ctx.parsed.y.toFixed(2),
+                },
+              }),
+              benchmarkLine: { value: winningPointsMax, label: 'Winning points' },
+            }),
+          }),
+          plugins: [benchmarkLinePlugin],
+        });
+      })();
+    </script>
+  </body>
+</html>
+<!-- Cached by Page Cache at 2026-09-21T22:23:28 -->

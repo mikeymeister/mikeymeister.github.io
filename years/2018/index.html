@@ -10,7 +10,7 @@
         [x-cloak] { display: none !important; }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
     <header class="bg-white border-b border-gray-200" x-data="{ mobileMenuOpen: false }" x-on:keydown.escape.window="mobileMenuOpen = false">
   <nav aria-label="Global" class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8">
     <a href="https://mikeymeister.github.io/" class="-m-1.5 p-1.5 flex flex-col gap-2">
@@ -26,7 +26,8 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="https://mikeymeister.github.io/years" class="font-semibold text-gray-900 text-sm/6">Archive</a>
+      <a href="https://mikeymeister.github.io/years" class="font-semibold text-gray-900 text-sm/6">Years</a>
+      <a href="https://mikeymeister.github.io/clubs" class="font-semibold text-gray-900 text-sm/6">Clubs</a>
       <a href="https://mikeymeister.github.io/methodology" class="font-semibold text-gray-900 text-sm/6">Methodology</a>
     </div>
   </nav>
@@ -59,7 +60,8 @@
         <div class="flow-root mt-6">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="py-6 space-y-2">
-              <a href="https://mikeymeister.github.io/years" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Archive</a>
+              <a href="https://mikeymeister.github.io/years" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Years</a>
+              <a href="https://mikeymeister.github.io/clubs" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Clubs</a>
               <a href="https://mikeymeister.github.io/methodology" class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50">Methodology</a>
             </div>
           </div>
@@ -69,7 +71,7 @@
   </div>
 </header>
 
-    <div class=" mx-auto px-6 md:px-8 my-16">
+    <div class="container mx-auto px-6 md:px-8 my-16 flex-1">
         <div class="w-full">
   <div class="container mx-auto sm:px-6 md:px-8 sm:flex sm:items-center">
     <div class="flex flex-col sm:flex-auto">
@@ -162,12 +164,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[328]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Ormskirk CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/ormskirk-cc" class="font-semibold text-gray-900">Ormskirk CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -191,8 +200,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -216,8 +232,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -241,8 +264,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 4th XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             4th XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -292,12 +322,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[445]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Northern CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/northern-cc" class="font-semibold text-gray-900">Northern CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -321,8 +358,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -346,8 +390,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI SK</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI SK
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -371,8 +422,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 4th XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             4th XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -396,8 +454,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 5th XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             5th XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -425,102 +490,123 @@
                 </tr>
                                                                                                                             <tr
                   class="cursor-pointer border-t border-gray-300 "
-                  x-bind:class="openRows[402] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
-                  x-on:click="openRows[402] = !openRows[402]"
+                  x-bind:class="openRows[408] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
+                  x-on:click="openRows[408] = !openRows[408]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
                                               <span>3</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
-                        Formby CC
+                        Wallasey CC
                       </span>
                     </td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">316.00</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">244.00</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">233.20</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">247.00</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">403.00</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">188.65</td>
                     <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
-                      793.20
+                      838.65
                     </td>
                     <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
                 </tr>
-                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[402]" x-transition>
+                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[408]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Formby CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/wallasey-cc" class="font-semibold text-gray-900">Wallasey CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>316</dd>
+                              <dd>247</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  316.00
+                                                                  247.00
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  316.00
+                                                                  247.00
                                                               </dd>
                             </div>
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>244</dd>
+                              <dd>403</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  244.00
+                                                                  403.00
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  244.00
+                                                                  403.00
                                                               </dd>
                             </div>
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South East) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
                             <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
+                            <div>
                               <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>10</dd>
+                              <dd>20</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>212</dd>
+                              <dd>343</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  466.40
+                                                                  377.30
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  233.20
+                                                                  188.65
                                                               </dd>
                             </div>
                           </dl>
@@ -552,12 +638,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[390]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Southport &amp; Birkdale CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/southport-birkdale-cc" class="font-semibold text-gray-900">Southport &amp; Birkdale CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -581,8 +674,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -606,8 +706,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North West) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -657,12 +764,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[332]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Bootle CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/bootle-cc" class="font-semibold text-gray-900">Bootle CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -686,8 +800,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -711,8 +832,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI AM</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI AM
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -762,12 +890,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[300]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Sefton Park CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/sefton-park-cc" class="font-semibold text-gray-900">Sefton Park CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -791,8 +926,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -816,33 +958,47 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
                             <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
+                            <div>
                               <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>14</dd>
+                              <dd>22</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>135</dd>
+                              <dd>280</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  212.14
+                                                                  280.00
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  106.07
+                                                                  140.00
                                                               </dd>
                             </div>
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 4th XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             4th XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -866,8 +1022,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 5th XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             5th XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -917,12 +1080,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[320]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">New Brighton CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/new-brighton-cc" class="font-semibold text-gray-900">New Brighton CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -946,8 +1116,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -971,8 +1148,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> Magpies (3rd XI)</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             Magpies (3rd XI)
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -996,8 +1180,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> Rakers (3rd XI)</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             Rakers (3rd XI)
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1025,207 +1216,123 @@
                 </tr>
                                                                                                                             <tr
                   class="cursor-pointer border-t border-gray-300 "
-                  x-bind:class="openRows[408] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
-                  x-on:click="openRows[408] = !openRows[408]"
+                  x-bind:class="openRows[402] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
+                  x-on:click="openRows[402] = !openRows[402]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
                                               <span>8</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
-                        Wallasey CC
+                        Formby CC
                       </span>
                     </td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">247.00</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">403.00</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">1.10</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">316.00</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">244.00</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">69.93</td>
                     <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
-                      651.10
+                      629.93
                     </td>
                     <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
                 </tr>
-                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[408]" x-transition>
+                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[402]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Wallasey CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/formby-cc" class="font-semibold text-gray-900">Formby CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>247</dd>
+                              <dd>316</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  247.00
+                                                                  316.00
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  247.00
+                                                                  316.00
                                                               </dd>
                             </div>
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>403</dd>
+                              <dd>244</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  403.00
+                                                                  244.00
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  403.00
+                                                                  244.00
                                                               </dd>
                             </div>
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South East) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
                             <div>
-                              <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>10</dd>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
                             </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>1</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Pts / 22</dt>
-                              <dd>
-                                                                  2.20
-                                                              </dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Div Corrected</dt>
-                              <dd>
-                                                                  1.10
-                                                              </dd>
-                            </div>
-                          </dl>
-                        </div>
-                                          </div>
-                  </td>
-                </tr>
-                                                                                                                            <tr
-                  class="cursor-pointer border-t border-gray-300 "
-                  x-bind:class="openRows[370] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
-                  x-on:click="openRows[370] = !openRows[370]"
-                >
-                    <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>9</span>  
-                                          </td>
-                    <td class="px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
-                        Orrell Red Triangle CC
-                      </span>
-                    </td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">181.00</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">227.00</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">180.71</td>
-                    <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
-                      588.71
-                    </td>
-                    <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
-                </tr>
-                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[370]" x-transition>
-                  <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
-                    <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Orrell Red Triangle CC 2018</span>
-                    </div>
-                    <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
-                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
-                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
-                            <div>
-                              <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>22</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>362</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Pts / 22</dt>
-                              <dd>
-                                                                  362.00
-                                                              </dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Div Corrected</dt>
-                              <dd>
-                                                                  181.00
-                                                              </dd>
-                            </div>
-                          </dl>
-                        </div>
-                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
-                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
-                            <div>
-                              <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>22</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>227</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Pts / 22</dt>
-                              <dd>
-                                                                  227.00
-                                                              </dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Div Corrected</dt>
-                              <dd>
-                                                                  227.00
-                                                              </dd>
-                            </div>
-                          </dl>
-                        </div>
-                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
-                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>230</dd>
+                              <dd>89</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  361.43
+                                                                  139.86
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  180.71
+                                                                  69.93
                                                               </dd>
                             </div>
                           </dl>
@@ -1239,7 +1346,7 @@
                   x-on:click="openRows[358] = !openRows[358]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>10</span>  
+                                              <span>9</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -1257,12 +1364,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[358]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Leigh CC, Lancashire 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/leigh-cc-lancashire" class="font-semibold text-gray-900">Leigh CC, Lancashire</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1286,8 +1400,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>12</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1311,8 +1432,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North East)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>12</dd>
@@ -1344,7 +1472,7 @@
                   x-on:click="openRows[631] = !openRows[631]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>11</span>  
+                                              <span>10</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -1362,12 +1490,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[631]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Lytham CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/lytham-cc" class="font-semibold text-gray-900">Lytham CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1391,8 +1526,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1416,8 +1558,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North East)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>12</dd>
@@ -1436,6 +1585,132 @@
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
                                                                   131.08
+                                                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                                          </div>
+                  </td>
+                </tr>
+                                                                                                                            <tr
+                  class="cursor-pointer border-t border-gray-300 "
+                  x-bind:class="openRows[370] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
+                  x-on:click="openRows[370] = !openRows[370]"
+                >
+                    <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
+                                              <span>11</span>  
+                                          </td>
+                    <td class="px-2 py-2 text-sm font-medium text-gray-900">
+                      <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
+                        Orrell Red Triangle CC
+                      </span>
+                    </td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">181.00</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">227.00</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">124.67</td>
+                    <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
+                      532.67
+                    </td>
+                    <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
+                </tr>
+                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[370]" x-transition>
+                  <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
+                    <div class="flex items-center justify-between">
+                      <a href="https://mikeymeister.github.io/clubs/orrell-red-triangle-cc" class="font-semibold text-gray-900">Orrell Red Triangle CC</a>
+                    </div>
+                    <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
+                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
+                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Played</dt>
+                              <dd>22</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Points</dt>
+                              <dd>362</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Pts / 22</dt>
+                              <dd>
+                                                                  362.00
+                                                              </dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Div Corrected</dt>
+                              <dd>
+                                                                  181.00
+                                                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
+                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Played</dt>
+                              <dd>22</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Points</dt>
+                              <dd>227</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Pts / 22</dt>
+                              <dd>
+                                                                  227.00
+                                                              </dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Div Corrected</dt>
+                              <dd>
+                                                                  227.00
+                                                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North West) sponsored by Liverpool Gin</span>
+                          </div>
+                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Played</dt>
+                              <dd>12</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Points</dt>
+                              <dd>136</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Pts / 22</dt>
+                              <dd>
+                                                                  249.33
+                                                              </dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Div Corrected</dt>
+                              <dd>
+                                                                  124.67
                                                               </dd>
                             </div>
                           </dl>
@@ -1467,12 +1742,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[288]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Rainhill CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/rainhill-cc" class="font-semibold text-gray-900">Rainhill CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1496,8 +1778,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1521,8 +1810,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South East) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>10</dd>
@@ -1572,12 +1868,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[469]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Colwyn Bay CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/colwyn-bay-cc" class="font-semibold text-gray-900">Colwyn Bay CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1601,8 +1904,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1626,8 +1936,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -1677,12 +1994,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[394]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Wigan CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/wigan-cc" class="font-semibold text-gray-900">Wigan CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1706,8 +2030,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1731,8 +2062,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North East)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>12</dd>
@@ -1782,12 +2120,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[348]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Rainford CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/rainford-cc" class="font-semibold text-gray-900">Rainford CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1811,8 +2156,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1836,8 +2188,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South East) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>10</dd>
@@ -1865,11 +2224,137 @@
                 </tr>
                                                                                                                             <tr
                   class="cursor-pointer border-t border-gray-300 "
+                  x-bind:class="openRows[296] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
+                  x-on:click="openRows[296] = !openRows[296]"
+                >
+                    <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
+                                              <span>16</span>  
+                                          </td>
+                    <td class="px-2 py-2 text-sm font-medium text-gray-900">
+                      <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
+                        Newton-le-Willows CC
+                      </span>
+                    </td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">102.50</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">135.50</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">176.92</td>
+                    <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
+                      414.92
+                    </td>
+                    <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
+                </tr>
+                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[296]" x-transition>
+                  <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
+                    <div class="flex items-center justify-between">
+                      <a href="https://mikeymeister.github.io/clubs/newton-le-willows-cc" class="font-semibold text-gray-900">Newton-le-Willows CC</a>
+                    </div>
+                    <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
+                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
+                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Played</dt>
+                              <dd>22</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Points</dt>
+                              <dd>205</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Pts / 22</dt>
+                              <dd>
+                                                                  205.00
+                                                              </dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Div Corrected</dt>
+                              <dd>
+                                                                  102.50
+                                                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
+                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Played</dt>
+                              <dd>22</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Points</dt>
+                              <dd>271</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Pts / 22</dt>
+                              <dd>
+                                                                  271.00
+                                                              </dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Div Corrected</dt>
+                              <dd>
+                                                                  135.50
+                                                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South East) sponsored by Liverpool Gin</span>
+                          </div>
+                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Played</dt>
+                              <dd>12</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Points</dt>
+                              <dd>193</dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Pts / 22</dt>
+                              <dd>
+                                                                  353.83
+                                                              </dd>
+                            </div>
+                            <div>
+                              <dt class="font-medium text-gray-500">Div Corrected</dt>
+                              <dd>
+                                                                  176.92
+                                                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                                          </div>
+                  </td>
+                </tr>
+                                                                                                                            <tr
+                  class="cursor-pointer border-t border-gray-300 "
                   x-bind:class="openRows[4655] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
                   x-on:click="openRows[4655] = !openRows[4655]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>16</span>  
+                                              <span>17</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -1887,12 +2372,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[4655]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Birchfield Park CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/birchfield-park-cc" class="font-semibold text-gray-900">Birchfield Park CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1916,8 +2408,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -1949,7 +2448,7 @@
                   x-on:click="openRows[292] = !openRows[292]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>17</span>  
+                                              <span>18</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -1958,21 +2457,28 @@
                     </td>
                     <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">84.50</td>
                     <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">182.50</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">135.14</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">120.00</td>
                     <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
-                      402.14
+                      387.00
                     </td>
                     <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
                 </tr>
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[292]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Liverpool CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/liverpool-cc" class="font-semibold text-gray-900">Liverpool CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>12</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -1996,8 +2502,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2021,26 +2534,33 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
                             <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
+                            <div>
                               <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>14</dd>
+                              <dd>22</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>172</dd>
+                              <dd>240</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  270.29
+                                                                  240.00
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  135.14
+                                                                  120.00
                                                               </dd>
                             </div>
                           </dl>
@@ -2054,7 +2574,7 @@
                   x-on:click="openRows[352] = !openRows[352]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>18</span>  
+                                              <span>19</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -2072,12 +2592,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[352]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Wavertree CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/wavertree-cc" class="font-semibold text-gray-900">Wavertree CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2101,8 +2628,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2126,8 +2660,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -2159,7 +2700,7 @@
                   x-on:click="openRows[423] = !openRows[423]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>19</span>  
+                                              <span>20</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -2177,12 +2718,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[423]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Northop Hall CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/northop-hall-cc" class="font-semibold text-gray-900">Northop Hall CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -2206,8 +2754,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2231,8 +2786,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -2264,7 +2826,7 @@
                   x-on:click="openRows[593] = !openRows[593]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>20</span>  
+                                              <span>21</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -2282,12 +2844,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[593]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Highfield CC, Lancs 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/highfield-cc-lancs" class="font-semibold text-gray-900">Highfield CC, Lancs</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI ECB Premier League</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>12</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2311,8 +2880,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2336,8 +2912,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North East)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>12</dd>
@@ -2369,7 +2952,7 @@
                   x-on:click="openRows[431] = !openRows[431]"
                 >
                     <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>21</span>  
+                                              <span>22</span>  
                                           </td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
@@ -2387,12 +2970,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[431]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Birkenhead Park CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/birkenhead-park-cc" class="font-semibold text-gray-900">Birkenhead Park CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2416,8 +3006,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2441,8 +3038,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>12</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2461,111 +3065,6 @@
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
                                                                   91.00
-                                                              </dd>
-                            </div>
-                          </dl>
-                        </div>
-                                          </div>
-                  </td>
-                </tr>
-                                                                                                                            <tr
-                  class="cursor-pointer border-t border-gray-300 "
-                  x-bind:class="openRows[296] ? 'bg-indigo-100 border-b-0 border-t border-gray-400' : 'border-b border-gray-300'"
-                  x-on:click="openRows[296] = !openRows[296]"
-                >
-                    <td class="py-2 pl-4 pr-3 text-sm text-gray-500 whitespace-nowrap">
-                                              <span>22</span>  
-                                          </td>
-                    <td class="px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="block truncate max-w-[11rem] sm:max-w-[14rem] lg:max-w-[20rem]">
-                        Newton-le-Willows CC
-                      </span>
-                    </td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">102.50</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">135.50</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">85.80</td>
-                    <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
-                      323.80
-                    </td>
-                    <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
-                </tr>
-                <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[296]" x-transition>
-                  <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
-                    <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Newton-le-Willows CC 2018</span>
-                    </div>
-                    <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
-                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
-                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
-                            <div>
-                              <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>22</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>205</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Pts / 22</dt>
-                              <dd>
-                                                                  205.00
-                                                              </dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Div Corrected</dt>
-                              <dd>
-                                                                  102.50
-                                                              </dd>
-                            </div>
-                          </dl>
-                        </div>
-                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
-                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
-                            <div>
-                              <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>22</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>271</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Pts / 22</dt>
-                              <dd>
-                                                                  271.00
-                                                              </dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Div Corrected</dt>
-                              <dd>
-                                                                  135.50
-                                                              </dd>
-                            </div>
-                          </dl>
-                        </div>
-                                              <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
-                          <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
-                            <div>
-                              <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>10</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Points</dt>
-                              <dd>78</dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Pts / 22</dt>
-                              <dd>
-                                                                  171.60
-                                                              </dd>
-                            </div>
-                            <div>
-                              <dt class="font-medium text-gray-500">Div Corrected</dt>
-                              <dd>
-                                                                  85.80
                                                               </dd>
                             </div>
                           </dl>
@@ -2597,12 +3096,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[441]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Caldy CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/caldy-cc" class="font-semibold text-gray-900">Caldy CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -2626,8 +3132,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2651,8 +3164,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI (MD)</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI (MD)
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -2676,8 +3196,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI (MP)</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI (MP)
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -2727,12 +3254,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[398]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Ainsdale CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/ainsdale-cc" class="font-semibold text-gray-900">Ainsdale CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2756,8 +3290,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>12</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2781,8 +3322,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North West) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -2832,12 +3380,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[597]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Old Xaverians CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/old-xaverians-cc" class="font-semibold text-gray-900">Old Xaverians CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -2861,8 +3416,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2886,8 +3448,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -2937,12 +3506,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[342]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Fleetwood Hesketh CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/fleetwood-hesketh-cc" class="font-semibold text-gray-900">Fleetwood Hesketh CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2966,8 +3542,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>3</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -2991,8 +3574,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North West) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -3042,12 +3632,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[498]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Goodlass CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/goodlass-cc" class="font-semibold text-gray-900">Goodlass CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) Premier Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3097,12 +3694,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[316]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Maghull CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/maghull-cc" class="font-semibold text-gray-900">Maghull CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3126,8 +3730,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3151,8 +3762,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI (AL)</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI (AL)
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3176,8 +3794,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 opacity-40">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI (GL)</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI (GL)
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3227,12 +3852,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[575]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Prestatyn CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/prestatyn-cc" class="font-semibold text-gray-900">Prestatyn CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3256,8 +3888,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3281,8 +3920,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -3332,12 +3978,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[2019]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Alder CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/alder-cc" class="font-semibold text-gray-900">Alder CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3361,8 +4014,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3386,8 +4046,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North West) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -3437,12 +4104,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[601]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Spring View CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/spring-view-cc" class="font-semibold text-gray-900">Spring View CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3466,8 +4140,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3491,8 +4172,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North East)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>12</dd>
@@ -3542,12 +4230,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[308]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Southport Trinity CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/southport-trinity-cc" class="font-semibold text-gray-900">Southport Trinity CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3571,8 +4266,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3596,8 +4298,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (North West) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -3638,21 +4347,28 @@
                     </td>
                     <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">54.73</td>
                     <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">43.00</td>
-                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">119.90</td>
+                    <td class="hidden px-2 py-2 text-sm text-gray-500 md:table-cell whitespace-nowrap">85.64</td>
                     <td class="px-2 py-2 text-sm text-right text-gray-900 md:text-left whitespace-nowrap">
-                      217.63
+                      183.37
                     </td>
                     <td class="hidden py-2 pl-3 pr-4 text-sm font-medium text-right md:table-cell whitespace-nowrap"></td>
                 </tr>
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[366]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Hightown St Marys CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/hightown-st-marys-cc" class="font-semibold text-gray-900">Hightown St Marys CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>8</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3676,8 +4392,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3701,11 +4424,18 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South East) sponsored by Liverpool Gin</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
                             <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>6</dd>
+                            </div>
+                            <div>
                               <dt class="font-medium text-gray-500">Played</dt>
-                              <dd>10</dd>
+                              <dd>14</dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Points</dt>
@@ -3714,13 +4444,13 @@
                             <div>
                               <dt class="font-medium text-gray-500">Pts / 22</dt>
                               <dd>
-                                                                  239.80
+                                                                  171.29
                                                               </dd>
                             </div>
                             <div>
                               <dt class="font-medium text-gray-500">Div Corrected</dt>
                               <dd>
-                                                                  119.90
+                                                                  85.64
                                                               </dd>
                             </div>
                           </dl>
@@ -3752,12 +4482,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[553]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Sutton (St Helens) CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/sutton-st-helens-cc" class="font-semibold text-gray-900">Sutton (St Helens) CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -3781,8 +4518,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3832,12 +4576,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[384]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">South Liverpool CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/south-liverpool-cc" class="font-semibold text-gray-900">South Liverpool CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Sunday) First Division (South West)</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>1</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>14</dd>
@@ -3887,12 +4638,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[4692]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Burscough CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/burscough-cc" class="font-semibold text-gray-900">Burscough CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3916,8 +4674,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>5</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -3967,12 +4732,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[378]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Merseyside Sports and Cultural Club 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/merseyside-sports-and-cultural-club" class="font-semibold text-gray-900">Merseyside Sports and Cultural Club</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>2</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -4022,12 +4794,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[336]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">St Helens Town CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/st-helens-town-cc" class="font-semibold text-gray-900">St Helens Town CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>9</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -4051,8 +4830,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>4</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -4102,12 +4888,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[4935]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Skelmersdale CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/skelmersdale-cc" class="font-semibold text-gray-900">Skelmersdale CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>7</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -4157,12 +4950,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[324]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Prescot &amp; Odyssey CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/prescot-odyssey-cc" class="font-semibold text-gray-900">Prescot &amp; Odyssey CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 3rd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             3rd XI
+                                                        <span class="text-xs font-normal text-gray-500">3rd XI (Saturday) First Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>11</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -4212,12 +5012,19 @@
                 <tr class="bg-indigo-100 border-b border-gray-400" x-cloak x-show="openRows[362]" x-transition>
                   <td colspan="7" class="px-4 py-3 text-sm text-gray-700">
                     <div class="flex items-center justify-between">
-                      <span class="font-semibold text-gray-900">Parkfield Liscard CC 2018</span>
+                      <a href="https://mikeymeister.github.io/clubs/parkfield-liscard-cc" class="font-semibold text-gray-900">Parkfield Liscard CC</a>
                     </div>
                     <div class="mt-3 space-y-3 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-3 md:space-y-0">
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 1st XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             1st XI
+                                                        <span class="text-xs font-normal text-gray-500">1st XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>10</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>20</dd>
@@ -4241,8 +5048,15 @@
                           </dl>
                         </div>
                                               <div class="rounded-md border border-gray-200 bg-white p-3 ">
-                          <div class="text-sm font-semibold text-gray-900"> 2nd XI</div>
+                          <div class="text-sm font-semibold text-gray-900">
+                             2nd XI
+                                                        <span class="text-xs font-normal text-gray-500">2nd XI Second Division</span>
+                          </div>
                           <dl class="grid grid-cols-2 mt-2 text-xs text-gray-700 gap-x-4 gap-y-2">
+                            <div>
+                              <dt class="font-medium text-gray-500">Position</dt>
+                              <dd>12</dd>
+                            </div>
                             <div>
                               <dt class="font-medium text-gray-500">Played</dt>
                               <dd>22</dd>
@@ -4278,6 +5092,6 @@
   </div>
 </footer>
 
-</body>
+    </body>
 </html>
-<!-- Cached by Page Cache at 2026-03-30T11:12:31 -->
+<!-- Cached by Page Cache at 2026-09-21T22:23:01 -->
